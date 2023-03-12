@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+  <body> <!--style="background-color: lightskyblue;"-->
+    <header>
+      <!--nav class="navbar navbar-light"> <!--style="background-color: blue;"-->
+        <div class="container">
+          <div class="row">
+            <div class="col-2">
+              <a class="navbar-brand" href="{% url 'posts:index' %}">
+                <img src="{% static 'img/foto/asef.png' %}" width="100" height="100"
+                class="d-inline-block align-top;" style="margin-top: 40px;" alt="">
+              </a> 
+            </div>
+            <div class="col-10">
+              <h3 style="text-align: center; font-size: 50px; margin: 35px 200px 0px 0px">
+                Asef Auto
+              </h3>
+              <h4 style="font-size: 30px; margin: 0px 0px 50px 60px;"><hr>
+                Предлагаем Автомобили и Мото технику с аукционов Японии
+              </h4><hr>
+            </div>      
+          </div>    
+        </div> 
+      <!--/nav-->
+    </header>
+    <div class="container py-5" style="margin: 0px 20px 0px 20px">
+      
+      
+      <!--p style="border-bottom-style: solid;"></p-->
+      <div class="row">
+        <div class="col-2" style="border-right-style: solid;">
+          <section> 
+            <h5 style="font-family: arial; text-align: left;">Информация<hr></h5>
+            <!--ul style="text-size: left;"-->
+              <p style="margin-bottom: 5px;">С Аукционов в Японии</p>
+              <a style="link;" href="{% url 'posts:auto' %}">Автомобили</a><br>
+              <a style="link;" href="{% url 'posts:moto' %}">Мото техника</a><hr>
+            </ul>
+          </section> 
+          <section style="margin-top: 10px;">
+            <div style="font-family: arial; text-align;">Как мы работаем<hr></div>
+            <a style="link;" href="{% url 'posts:ja_auction' %}">Покупка с аукциона</a>
+            <a style="link;" href="{% url 'posts:georgia' %}">Покупка с Грузии</a>
+          </section>  
+        </div>
+        <div class="col-10">
+          <section>
+            <p>
+              А если серьёзно, Группа компаний «ПРИВЕТ ИЗ БАКУ ПРИЕХАТЬ НЕ МОГУ»<br> 
+              предлагает заказ автомобилей с аукционов Японии под полную пошлину<br>
+              и конструкторов отправку в регионы РФ. Работаем с 2005 года(!), <br>
+              являясь одной из старейших и крупнейших компаний в этой сфере. За<br> 
+              это время мы отправили тысячи японских автомобилей в разные регионы<br>
+              России, а так же мото и спецтехнику из Японии. Получили сотни хороших<br>
+              отзывов от клиентов, многие из которых стали нашими постоянными.
+            </p> 
+          </section>     
+        </div>  
+      </div>
+    </div>   
+    <footer class="border-top text-center py-3">
+    <p>© Copyright <span style="color:red">Ya</span>tube</p>
+    </footer>
+  </body>
+</html>
+{% endblock %}
